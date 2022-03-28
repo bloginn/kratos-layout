@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package api.open.v1;
+
+option go_package = "kratos-layout/api/open/v1;v1";
+
+enum ErrorReason {
+  SUCCESS = 0;
+  USER_NOT_FOUND = 10001;
+}

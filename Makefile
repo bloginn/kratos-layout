@@ -36,6 +36,16 @@ api:
 build:
 	mkdir -p bin/ && go build -ldflags "-X main.Version=$(VERSION)" -o ./bin/ ./...
 
+.PHONY: wire
+# wire
+wire:
+	cd cmd/open && wire
+
+.PHONY: run
+# run
+run:
+	kratos run
+
 .PHONY: generate
 # generate
 generate:
